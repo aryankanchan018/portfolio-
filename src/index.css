@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { @apply font-inter bg-white text-gray-900 overflow-x-hidden; }
+  h1, h2, h3, h4, h5 { @apply font-sora; }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { @apply bg-gray-100; }
+  ::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+}
+
+@layer components {
+  .section-container { @apply max-w-6xl mx-auto px-6 lg:px-8; }
+
+  .section-label {
+    @apply flex items-center gap-2 text-[#2563EB] text-xs font-bold tracking-widest uppercase mb-4;
+  }
+
+  .section-title {
+    @apply font-sora text-3xl md:text-4xl font-bold text-gray-900 leading-tight;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-[#2563EB] text-white px-6 py-3 rounded-xl font-semibold text-sm
+           hover:bg-[#1D4ED8] transition-all duration-200 shadow-lg
+           hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white text-gray-800 px-6 py-3 rounded-xl font-semibold text-sm
+           border border-gray-200 hover:border-blue-200 hover:text-[#2563EB]
+           transition-all duration-200 hover:-translate-y-0.5 shadow-sm hover:shadow-md cursor-pointer;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg
+           transition-all duration-300;
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold
+           bg-blue-50 text-[#2563EB] border border-blue-100;
+  }
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563EB, #6366F1);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* Loader dots */
+.loader-dot {
+  animation: loader-bounce 1.2s ease-in-out infinite;
+}
+.loader-dot:nth-child(2) { animation-delay: 0.2s; }
+.loader-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes loader-bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Modal */
+.modal-backdrop { animation: fadeIn 0.2s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

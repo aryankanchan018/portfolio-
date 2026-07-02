@@ -28,4 +28,4 @@ npm run dev
 ```
 
 ## 🌐 Deploy
-Deployed on Vercel — [View Live]([https://aryankanchan.vercel.app](https://portfolio-jade-omega-m084m4o8ua.vercel.app/))
+Deployed on Vercel — ([https://aryankanchan.vercel.app](https://portfolio-jade-omega-m084m4o8ua.vercel.app/))

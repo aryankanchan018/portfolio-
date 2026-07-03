@@ -79,7 +79,7 @@ export default function Projects() {
         </div>
 
         <FadeIn delay={0.3} className="text-center mt-12">
-          <a href="https://github.com/aryankanchan" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+          <a href="https://github.com/Aryankanchan018" target="_blank" rel="noopener noreferrer" className="btn-secondary">
             <GithubIcon size={16} /> View All on GitHub
           </a>
         </FadeIn>

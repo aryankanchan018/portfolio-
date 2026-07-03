@@ -30,6 +30,12 @@ export default function Achievements() {
                 <h3 className="font-sora font-bold text-gray-900 mb-1 leading-snug">{a.title}</h3>
                 <p className="text-accent text-xs font-semibold mb-3">{a.org}</p>
                 <p className="text-gray-500 text-sm leading-relaxed flex-1">{a.desc}</p>
+                {a.link && (
+                  <a href={a.link} target="_blank" rel="noopener noreferrer"
+                    className="mt-4 text-xs font-semibold text-accent hover:underline">
+                    View Certificate →
+                  </a>
+                )}
               </motion.div>
             </FadeIn>
           ))}

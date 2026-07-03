@@ -33,9 +33,9 @@ export default function Contact() {
 
   const LINKS = [
     { icon: Mail, label: 'Email', value: SOCIAL.email, href: `mailto:${SOCIAL.email}` },
-    { icon: LinkedinIcon, label: 'LinkedIn', value: 'linkedin.com/in/aryankanchan', href: SOCIAL.linkedin },
-    { icon: GithubIcon, label: 'GitHub', value: 'github.com/aryankanchan', href: SOCIAL.github },
-    { icon: InstagramIcon, label: 'Instagram', value: '@aryankanchan', href: SOCIAL.instagram },
+    { icon: LinkedinIcon, label: 'LinkedIn', value: 'linkedin.com/in/aryan-kanchan-47709725b', href: SOCIAL.linkedin },
+    { icon: GithubIcon, label: 'GitHub', value: 'github.com/Aryankanchan018', href: SOCIAL.github },
+    { icon: InstagramIcon, label: 'Instagram', value: '@aryan_kanchan_18', href: SOCIAL.instagram },
     { icon: MapPin, label: 'Location', value: SOCIAL.location, href: '#' },
   ];
 

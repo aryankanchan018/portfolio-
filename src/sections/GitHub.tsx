@@ -4,7 +4,7 @@ import { Star, GitFork, Users, BookOpen } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 import { GithubIcon } from '../components/SocialIcons';
 
-const GITHUB_USER = 'aryankanchan';
+const GITHUB_USER = 'Aryankanchan018';
 
 interface GHUser { public_repos: number; followers: number; following: number; }
 interface GHRepo { id: number; name: string; description: string; stargazers_count: number; forks_count: number; language: string; html_url: string; }

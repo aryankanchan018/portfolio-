@@ -36,9 +36,11 @@ export default function Education() {
                   <p className="text-gray-500 text-sm">{edu.field}</p>
                   <div className="flex items-center gap-4 mt-3">
                     <span className="text-xs text-gray-400 font-medium">📅 {edu.period}</span>
-                    <span className="text-xs font-semibold text-gray-700 bg-gray-100 px-2.5 py-1 rounded-full">
-                      {edu.grade}
-                    </span>
+                    {edu.grade && (
+                      <span className="text-xs font-semibold text-gray-700 bg-gray-100 px-2.5 py-1 rounded-full">
+                        {edu.grade}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

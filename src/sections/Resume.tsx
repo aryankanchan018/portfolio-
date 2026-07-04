@@ -43,7 +43,7 @@ export default function Resume() {
             <div className="grid grid-cols-3 gap-4 mt-6">
               {[
                 { label: 'Education', value: 'B.Tech CSE' },
-                { label: 'Graduation', value: '2026' },
+                { label: 'Graduation', value: '2028' },
                 { label: 'Location', value: 'Pune, India' },
               ].map(({ label, value }) => (
                 <div key={label} className="card p-4 text-center">

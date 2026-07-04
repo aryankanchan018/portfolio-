@@ -16,7 +16,7 @@ function StatCard({ label, value, suffix }: { label: string; value: number; suff
 }
 
 const HIGHLIGHTS = [
-  { icon: GraduationCap, label: 'MIT ADT University', sub: 'B.Tech CSE · 2022–2026' },
+  { icon: GraduationCap, label: 'MIT ADT University', sub: 'B.Tech CSE · 2022–2028' },
   { icon: MapPin, label: 'Pune, Maharashtra', sub: 'India' },
   { icon: Code2, label: 'Software Engineer', sub: 'Full Stack & AI' },
   { icon: Brain, label: 'AI Enthusiast', sub: 'ML · CV · NLP' },

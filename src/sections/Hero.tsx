@@ -51,7 +51,7 @@ function Avatar() {
       <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-accent/20 to-indigo-400/10 blur-2xl animate-pulse-slow" />
       {/* Profile photo */}
       <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-2xl overflow-hidden">
-        <img src={profilePic} alt="Aryan Kanchan" className="w-full h-full object-cover" />
+        <img src={profilePic} alt="Aryan Kanchan" className="w-full h-full object-cover object-top" />
       </div>
 
       {/* Floating badges */}

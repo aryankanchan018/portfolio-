@@ -222,7 +222,7 @@ export const EDUCATION = [
     degree: 'Bachelor of Technology',
     field: 'Computer Science Engineering',
     institution: 'MIT ADT University',
-    period: '2022 – 2026',
+    period: '2022 – 2028',
     status: 'Current Student',
     grade: '',
     icon: '🎓',

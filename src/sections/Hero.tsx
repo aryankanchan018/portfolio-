@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Download, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
 import { SOCIAL } from '../data';
+import profilePic from '../assets/profile.jpeg';
 
 // Abstract AI-inspired SVG background
 function HeroBg() {
@@ -38,7 +39,6 @@ function HeroBg() {
   );
 }
 
-// Avatar placeholder with initials
 function Avatar() {
   return (
     <motion.div
@@ -49,34 +49,9 @@ function Avatar() {
     >
       {/* Glow ring */}
       <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-accent/20 to-indigo-400/10 blur-2xl animate-pulse-slow" />
-      {/* Avatar circle */}
-      <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 border-4 border-white shadow-2xl flex items-center justify-center overflow-hidden">
-        {/* Abstract AI face illustration */}
-        <svg viewBox="0 0 200 200" className="w-full h-full" fill="none">
-          <defs>
-            <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#DBEAFE" />
-              <stop offset="100%" stopColor="#EEF2FF" />
-            </linearGradient>
-          </defs>
-          <rect width="200" height="200" fill="url(#avatarGrad)" />
-          {/* Silhouette */}
-          <ellipse cx="100" cy="85" rx="38" ry="42" fill="#BFDBFE" />
-          <ellipse cx="100" cy="170" rx="60" ry="50" fill="#BFDBFE" />
-          {/* Face details */}
-          <circle cx="86" cy="80" r="5" fill="#2563EB" fillOpacity="0.6" />
-          <circle cx="114" cy="80" r="5" fill="#2563EB" fillOpacity="0.6" />
-          <path d="M88 98 Q100 108 112 98" stroke="#2563EB" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" fill="none" />
-          {/* Circuit lines */}
-          <line x1="30" y1="100" x2="62" y2="100" stroke="#2563EB" strokeOpacity="0.2" strokeWidth="1" />
-          <line x1="138" y1="100" x2="170" y2="100" stroke="#2563EB" strokeOpacity="0.2" strokeWidth="1" />
-          <circle cx="30" cy="100" r="3" fill="#2563EB" fillOpacity="0.2" />
-          <circle cx="170" cy="100" r="3" fill="#2563EB" fillOpacity="0.2" />
-        </svg>
-        {/* Initials overlay */}
-        <div className="absolute inset-0 flex items-end justify-center pb-8">
-          <span className="font-sora font-bold text-5xl text-accent/30">AK</span>
-        </div>
+      {/* Profile photo */}
+      <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-2xl overflow-hidden">
+        <img src={profilePic} alt="Aryan Kanchan" className="w-full h-full object-cover" />
       </div>
 
       {/* Floating badges */}

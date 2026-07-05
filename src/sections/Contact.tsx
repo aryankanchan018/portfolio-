@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
@@ -26,9 +27,20 @@ export default function Contact() {
     setErrors(errs);
     if (Object.keys(errs).length) return;
     setSending(true);
-    await new Promise(r => setTimeout(r, 1200));
-    setSending(false);
-    setSent(true);
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        { from_name: form.name, from_email: form.email, subject: form.subject, message: form.message },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      setSent(true);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : JSON.stringify(err);
+      setErrors({ message: `Error: ${msg}` });
+    } finally {
+      setSending(false);
+    }
   };
 
   const LINKS = [
